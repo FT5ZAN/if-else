@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else concpet</title>
+    <style>
+        body {
+            min-height: 67vh;
+            background: url(bgimg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* backdrop-filter: blur(10px); */
+            /* opacity: 0.7; */
+        }
+
+        .box {
+            border: 2px solid white;
+            height: 300px;
+            width: 295px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 40px;
+            /* background-color: white; */
+            border-radius: 10%;
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 28px 1px rgb(84, 84, 84);
+            /* opacity: 0.9; */
+            flex-direction: row;
+        }
+
+        h1 {
+            font-family: fantasy;
+            position: relative;
+            text-align: center;
+            /* top: -209px;
+            right: 7px; */
+            /* color: white; */
+            font-size: 53px;
+        }
+
+        label {
+            color: white;
+            font-size: 63px;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+            top: -90px;
+            left: 72px;
+        }
+
+        input {
+            position: relative;
+            top: 10px;
+            right: 25px;
+            width: 233px;
+            height: 60px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        button {
+            position: relative;
+            bottom: -90px;
+            right: 175px;
+            padding: 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Verify your Age for Play GTA-6</h1>
+        <div class="box">
+            <div>
+                <label for="age">Age </label>
+            </div>
+            <div>
+                <input type="number" id="age" placeholder="Enter Your Age">
+            </div>
+            <button type="submit" id="submit" onclick="Submit()">Submit</button>
+        </div>
+    </div>
+    <script>
+        let play = document.getElementById("age");
+        let button = document.getElementById("Submit");
+        function Submit() {
+            // let age = 18;
+            if (play.value >= 18) {
+                alert("Congratulation You are Eligible to Play Gta-6");
+            }
+            // // else if (play.value == 80) {
+            // //     alert("Yes you can play & enjoy your reterment life");
+            // }
+            else {
+                alert("Sorry You are Not Eligible to Play Gta-6");
+            }
+        }
+    </script>
+</body>
+
+</html>
